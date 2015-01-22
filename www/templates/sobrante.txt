@@ -1,0 +1,14 @@
+<ion-item nav-clear menu-close href="#/app/map">
+          Mapa
+        </ion-item>
+
+
+        .state('app.map', {
+    url: "/map",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/mapview.html",
+        controller: "MapCtrl"
+      }
+    }
+  })
