@@ -44,12 +44,11 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
     url: "/formulario",
     views: {
       'menuContent': {
-        templateUrl: "templates/formulario.html"
+        templateUrl: "templates/formulario.html",
+        controller: "FormularioCtrl"
       }
     }
   })
-
-  
 
   .state('app.playlists', {
     url: "/playlists",
