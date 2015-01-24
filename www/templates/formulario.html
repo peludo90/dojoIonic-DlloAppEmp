@@ -3,39 +3,40 @@
     </br>
     <div class="list">
         <label class="item item-input">
-            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name" ng-model="name" required="true">
         </label>
         <label class="item item-input">
-            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder="Last Name" ng-model="lastname" required="true">
         </label>
         <label class="item item-input item-stacked-label">
             <span class="input-label">Description</span>
-            <textarea placeholder="Tell us about you"></textarea>
+            <textarea placeholder="Tell us about you" ng-model="description" required="true"></textarea>
         </label>
 
         <label class="item item-input">
             <span class="input-label">Date of birth</span>
-            <input type="date">
+            <input type="date" ng-model="dateOfBirth"  required="true">
         </label>
 
         <div class="item  range range-positive">
             <span class="input-label">How active are you?</span>
             <i class="icon ion-battery-empty"></i>
-            <input type="range" name="volume" min="0" max="100" value="33">
+            <input type="range" name="volume" min="0" max="100" value="33" ng-model="activeLevel">
             <i class="icon ion-battery-charging"></i>
         </div>
-    </div>
 
-
-
-
-    <div class="bar bar-footer">
-        <button class="button button-full button-positive">
+        <button class="button button-full button-positive" ng-click="getData()">
             Accept
         </button>
-    </br>
-    </br>
 
-    </div>	
+        <div class="card">
+            <div class="item item-text-wrap" >
+              <p>{{cardSample}}</p>
+            </div>
+        </div>
+
+
+
+    </div>
 
 </ion-view>
